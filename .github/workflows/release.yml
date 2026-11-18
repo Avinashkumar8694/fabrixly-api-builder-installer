@@ -1,0 +1,62 @@
+# Makes the release of the apps from the parts that were pushed to the branch "stage-<tag>" (apps/studio/scripts/publish-installers.mjs in the zero-flow project does that, one build at a time).
+# Git takes no file over 100 MB, so a build is stored as parts of 90 MB; this puts each one together again, checks it against manifest.json, and attaches it to the release.
+name: Release the apps
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: The tag to release (for example v1.3.2)
+        required: true
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      TAG: ${{ github.event.inputs.tag || github.ref_name }}
+    steps:
+      - name: The list of builds and the notes of the release
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TAG }}
+      - name: The parts of the builds
+        uses: actions/checkout@v4
+        with:
+          ref: stage-${{ env.TAG }}
+          path: stage
+      - name: Put every build together, and check it
+        run: |
+          set -euo pipefail
+          mkdir -p out
+          node <<'JS'
+          const fs = require('fs'), crypto = require('crypto'), path = require('path');
+          const manifest = JSON.parse(fs.readFileSync('manifest.json', 'utf8'));
+          let bad = 0;
+          for (const f of manifest.files) {
+            const dir = path.join('stage', 'parts', f.file);
+            if (!fs.existsSync(dir)) { console.error('NO PARTS for', f.file); bad++; continue; }
+            const parts = fs.readdirSync(dir).filter((n) => /\.part\d+$/.test(n)).sort();
+            const file = path.join('out', f.file);
+            const fd = fs.openSync(file, 'w');
+            for (const p of parts) fs.writeSync(fd, fs.readFileSync(path.join(dir, p)));
+            fs.closeSync(fd);
+            const sha = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+            const ok = fs.statSync(file).size === f.size && sha === f.sha256;
+            console.log(ok ? 'ok      ' : 'MISMATCH', f.file, f.size, 'bytes,', parts.length, 'parts');
+            if (!ok) bad++;
+          }
+          if (bad) process.exit(1);
+          JS
+      - name: The release, with the builds attached one at a time
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1 || gh release create "$TAG" --repo "$GITHUB_REPOSITORY" --title "Loom Studio ${TAG#v}" --notes-file RELEASE_NOTES.md --verify-tag
+          cp SHA256SUMS out/SHA256SUMS
+          for f in out/*; do
+            echo "uploading $f"
+            gh release upload "$TAG" "$f" --repo "$GITHUB_REPOSITORY" --clobber
+          done
