@@ -1,4 +1,4 @@
-# Loom Studio 0.2.0
+# Loom Studio 0.3.0
 
 The desktop app of Loom, the API builder. Build, test and run services on your own computer; browse and install nodes, libraries, middleware, services, APIs and data models from the marketplace; publish with your Fabrixly account.
 
