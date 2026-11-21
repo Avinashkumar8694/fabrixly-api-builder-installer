@@ -1,90 +1,90 @@
 {
-  "version": "0.3.0",
-  "builtAt": "2026-11-19T05:42:47.726Z",
+  "version": "0.4.0",
+  "builtAt": "2026-11-21T21:17:33.751Z",
   "files": [
     {
-      "file": "LoomStudio-0.3.0-mac-arm64.dmg",
+      "file": "LoomStudio-0.4.0-mac-arm64.dmg",
       "platform": "macos",
       "arch": "arm64",
       "kind": "dmg",
       "label": "Disk image (.dmg)",
-      "version": "0.3.0",
-      "size": 185609928,
-      "sha256": "60f4afda671c19571e3cf8a0f165909208ce693668b966c7b577278848e68000",
+      "version": "0.4.0",
+      "size": 199859510,
+      "sha256": "efb0e67ec71886acadb7c36d758b9e933eeefb774f2e728eebdd9e00a0203fbd",
       "primary": true,
-      "url": "https://github.com/Avinashkumar8694/fabrixly-api-builder-installer/releases/download/v0.3.0/LoomStudio-0.3.0-mac-arm64.dmg"
+      "url": "https://github.com/Avinashkumar8694/fabrixly-api-builder-installer/releases/download/v0.4.0/LoomStudio-0.4.0-mac-arm64.dmg"
     },
     {
-      "file": "LoomStudio-0.3.0-mac-arm64.zip",
+      "file": "LoomStudio-0.4.0-mac-arm64.zip",
       "platform": "macos",
       "arch": "arm64",
       "kind": "zip",
       "label": "Zip archive (.zip)",
-      "version": "0.3.0",
-      "size": 182358682,
-      "sha256": "8ea07266346d185bb4aa3492eacbb1f417c7da409267178ddb4eee644f60c4b0",
+      "version": "0.4.0",
+      "size": 197266358,
+      "sha256": "ec34c98086ea386bb87dbc5a0204ba719b02dbbdf988ff75fd1c0024ad4f762c",
       "primary": false,
-      "url": "https://github.com/Avinashkumar8694/fabrixly-api-builder-installer/releases/download/v0.3.0/LoomStudio-0.3.0-mac-arm64.zip"
+      "url": "https://github.com/Avinashkumar8694/fabrixly-api-builder-installer/releases/download/v0.4.0/LoomStudio-0.4.0-mac-arm64.zip"
     },
     {
-      "file": "LoomStudio-0.3.0-mac-x64.dmg",
+      "file": "LoomStudio-0.4.0-mac-x64.dmg",
       "platform": "macos",
       "arch": "x64",
       "kind": "dmg",
       "label": "Disk image (.dmg)",
-      "version": "0.3.0",
-      "size": 191083436,
-      "sha256": "35973073fdca4e1f0c1671841f06f896860bea5495b692464d04bfa3afa2c208",
+      "version": "0.4.0",
+      "size": 205418431,
+      "sha256": "55ad0a233ee1739ee9dc7fa694b4cc8dccb4346826aff1e65d14084a886db704",
       "primary": false,
-      "url": "https://github.com/Avinashkumar8694/fabrixly-api-builder-installer/releases/download/v0.3.0/LoomStudio-0.3.0-mac-x64.dmg"
+      "url": "https://github.com/Avinashkumar8694/fabrixly-api-builder-installer/releases/download/v0.4.0/LoomStudio-0.4.0-mac-x64.dmg"
     },
     {
-      "file": "LoomStudio-0.3.0-mac-x64.zip",
+      "file": "LoomStudio-0.4.0-mac-x64.zip",
       "platform": "macos",
       "arch": "x64",
       "kind": "zip",
       "label": "Zip archive (.zip)",
-      "version": "0.3.0",
-      "size": 187828064,
-      "sha256": "b925eace2e4c5ca196344b98bef3c5196677513ee285e166bb3e3f9a60abc15e",
+      "version": "0.4.0",
+      "size": 202735742,
+      "sha256": "c2adeea2f96220551c01dd58a455d5ba63ce8d1de99cdac26fddb16f8dea0a9c",
       "primary": false,
-      "url": "https://github.com/Avinashkumar8694/fabrixly-api-builder-installer/releases/download/v0.3.0/LoomStudio-0.3.0-mac-x64.zip"
+      "url": "https://github.com/Avinashkumar8694/fabrixly-api-builder-installer/releases/download/v0.4.0/LoomStudio-0.4.0-mac-x64.zip"
     },
     {
-      "file": "LoomStudio-Setup-0.3.0-x64.exe",
+      "file": "LoomStudio-Setup-0.4.0-x64.exe",
       "platform": "windows",
       "arch": "x64",
       "kind": "exe",
       "label": "Installer (.exe)",
-      "version": "0.3.0",
-      "size": 151106061,
-      "sha256": "2002147a49d7da22f833ead99b4953c0a3f3bca9efaa5b90d7b009152b26af78",
+      "version": "0.4.0",
+      "size": 164768002,
+      "sha256": "100f62faaeb61baa523b38489ff65c2c768c5c04248e61651ec4f706d6eb0889",
       "primary": true,
-      "url": "https://github.com/Avinashkumar8694/fabrixly-api-builder-installer/releases/download/v0.3.0/LoomStudio-Setup-0.3.0-x64.exe"
+      "url": "https://github.com/Avinashkumar8694/fabrixly-api-builder-installer/releases/download/v0.4.0/LoomStudio-Setup-0.4.0-x64.exe"
     },
     {
-      "file": "LoomStudio-0.3.0-linux-x64.AppImage",
+      "file": "LoomStudio-0.4.0-linux-x64.AppImage",
       "platform": "linux",
       "arch": "x64",
       "kind": "AppImage",
       "label": "AppImage (.AppImage)",
-      "version": "0.3.0",
-      "size": 155929590,
-      "sha256": "8ca9c6a5713a9f1e2af18b248c5909e4a791d4f8b07fc39cde0a6ab22b7260a0",
+      "version": "0.4.0",
+      "size": 167758695,
+      "sha256": "9bcf3fa91ef7ec69855b7bd5caccde1bcdd44212cb8fbb341f43d5aa78a72d53",
       "primary": true,
-      "url": "https://github.com/Avinashkumar8694/fabrixly-api-builder-installer/releases/download/v0.3.0/LoomStudio-0.3.0-linux-x64.AppImage"
+      "url": "https://github.com/Avinashkumar8694/fabrixly-api-builder-installer/releases/download/v0.4.0/LoomStudio-0.4.0-linux-x64.AppImage"
     },
     {
-      "file": "LoomStudio-0.3.0-linux-x64.deb",
+      "file": "LoomStudio-0.4.0-linux-x64.deb",
       "platform": "linux",
       "arch": "x64",
       "kind": "deb",
       "label": "Debian package (.deb)",
-      "version": "0.3.0",
-      "size": 124149988,
-      "sha256": "843d541d767f35a107993fe2ef5a0f5f362f30ef752ae3948ff0f91d330bbbe6",
+      "version": "0.4.0",
+      "size": 137085664,
+      "sha256": "363732d709c405b1e4c4b5c4ca8c137e8b5eb9d209e28eb8edf16eecb90deb97",
       "primary": false,
-      "url": "https://github.com/Avinashkumar8694/fabrixly-api-builder-installer/releases/download/v0.3.0/LoomStudio-0.3.0-linux-x64.deb"
+      "url": "https://github.com/Avinashkumar8694/fabrixly-api-builder-installer/releases/download/v0.4.0/LoomStudio-0.4.0-linux-x64.deb"
     }
   ]
 }
